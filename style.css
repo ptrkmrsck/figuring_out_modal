@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fondamento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Felipa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+
+html,
+body {
+  margin: 40px;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+p,
+ul,
+li {
+  font-family: "EB Garamond", serif;
+  font-size: 11pt;
+}
+
+#swIndent1 {
+  margin-left: 225pt;
+}
+
+#swIndent2 {
+  margin-left: 70pt;
+}
+
+#swIndent3 {
+  margin-left: 150pt;
+}
+
+.footnote p {
+  font-size: 9pt;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0.4em;
+}
+
+a {
+  color: black;
+}
+
+a:hover,
+.wiki-link:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 42%);
+  /* text-shadow: 2px 1.5px lightgrey; */
+  /* text-decoration: none; */
+}
+
+.Ω {
+  text-decoration: none;
+}
+.Ω:hover {
+  color: hotpink;
+}
+
+/* Modal Content */
+.wiki-content {
+  visibility: hidden;
+  position: absolute;
+  width: 60%;
+  z-index: 2000;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: serif;
+  box-shadow: 4px 4px;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 14pt;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wiki-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
