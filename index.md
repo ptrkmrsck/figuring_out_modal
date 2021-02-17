@@ -1,2 +1,2 @@
-silver-walls.html
+index.html
 /entries
