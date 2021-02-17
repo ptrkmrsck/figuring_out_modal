@@ -1,0 +1,2 @@
+silver-walls.html
+/entries
