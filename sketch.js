@@ -6,12 +6,29 @@ let handle = document.querySelector(".handle");
 const entry = document.querySelector("#entry-content");
 let toggle = 0;
 
+let wikiLinks = document.querySelectorAll(".wiki-link");
+
+wikiLinks.forEach((e) =>
+  e.addEventListener("click", () => wikiOpen(e.dataset.wiki))
+);
+
 // When the user clicks the button, open the modal
 function wikiOpen(html) {
+  //TODO -- add conditional that does something clever before trying to fetch if there is no entry in /entry
   fetch(`./entries/${html}.html`)
     .then((response) => response.text())
-    .then((txt) => (entry.innerHTML = txt))
-    .then(() => (modal.style.visibility = "visible"));
+    .then((txt) => {
+      entry.innerHTML = txt;
+      modal.style.visibility = "visible";
+      let innerWikiLinks = entry.querySelectorAll(".wiki-link");
+      innerWikiLinks.forEach((e) =>
+        e.addEventListener("click", () => wikiOpen(e.dataset.wiki))
+      );
+    })
+    .catch((e) => {
+      entry.innerHTML = "OOOPS";
+      modal.style.visibility = "visible";
+    });
 }
 // When the user clicks on <modalClose> (x), close the modal
 modalClose.onclick = function () {
